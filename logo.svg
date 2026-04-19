@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 110" width="340" height="110">
+  <defs>
+    <style>
+      .serif { font-family: Georgia, 'Times New Roman', serif; }
+    </style>
+  </defs>
+
+  <!-- ========== LOGO MARK ========== -->
+  <g transform="translate(8, 5)">
+    <!-- Outer diamond frame -->
+    <polygon points="50,0 100,50 50,100 0,50"
+             fill="none" stroke="#B8963E" stroke-width="2.2"/>
+
+    <!-- Mid diamond -->
+    <polygon points="50,14 86,50 50,86 14,50"
+             fill="none" stroke="#B8963E" stroke-width="1" opacity="0.42"/>
+
+    <!-- Inner diamond (small) -->
+    <polygon points="50,28 72,50 50,72 28,50"
+             fill="none" stroke="#B8963E" stroke-width="0.7" opacity="0.22"/>
+
+    <!-- Cross-hair axes -->
+    <line x1="0"   y1="50" x2="100" y2="50" stroke="#B8963E" stroke-width="0.8" opacity="0.25"/>
+    <line x1="50"  y1="0"  x2="50"  y2="100" stroke="#B8963E" stroke-width="0.8" opacity="0.25"/>
+
+    <!-- Corner accent dots -->
+    <circle cx="50" cy="0"   r="2.2" fill="#B8963E" opacity="0.65"/>
+    <circle cx="100" cy="50" r="2.2" fill="#B8963E" opacity="0.65"/>
+    <circle cx="50" cy="100" r="2.2" fill="#B8963E" opacity="0.65"/>
+    <circle cx="0"   cy="50" r="2.2" fill="#B8963E" opacity="0.65"/>
+
+    <!-- Centre gem (filled diamond) -->
+    <polygon points="50,41 59,50 50,59 41,50" fill="#B8963E"/>
+
+    <!-- Cutting tip extending below -->
+    <line x1="50" y1="100" x2="50" y2="108" stroke="#B8963E" stroke-width="2.8"/>
+    <polygon points="50,108 47,102 53,102" fill="#B8963E"/>
+  </g>
+
+  <!-- ========== WORDMARK ========== -->
+  <!-- Main company name -->
+  <text x="132" y="44"
+        class="serif"
+        font-size="26"
+        fill="#1B2A4A"
+        font-weight="bold"
+        letter-spacing="1.8">GRAVÍROVÁNÍ</text>
+
+  <!-- Thin gold separator line -->
+  <line x1="132" y1="54" x2="326" y2="54" stroke="#B8963E" stroke-width="0.9"/>
+
+  <!-- Sub-name in gold -->
+  <text x="132" y="74"
+        class="serif"
+        font-size="20"
+        fill="#B8963E"
+        letter-spacing="6">ŠPYTKO</text>
+
+  <!-- Tagline -->
+  <text x="133" y="92"
+        class="serif"
+        font-size="8.5"
+        fill="#8A8A8A"
+        letter-spacing="3.2">PRECIZNÍ GRAVÍROVÁNÍ OD ROKU 2003</text>
+</svg>

@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gravírování Špytko – Precizní gravírování cedulí, štítků a dárků | Česká republika</title>
+  <meta name="description" content="Profesionální gravírování laserem a frézováním. Firemní cedule, výrobní štítky, jmenovky, dárky. Zakázky od 1 kusu. Rychlé dodání po celé ČR. Nezávazná poptávka online.">
+  <meta name="keywords" content="gravírování, laserové gravírování, firemní cedule, výrobní štítky, jmenovky, gravírování Praha, gravírování cena, gravírování zakázky">
+  <meta name="author" content="Gravírování Špytko">
+  <meta property="og:title" content="Gravírování Špytko – Precizní gravírování pro firmy i jednotlivce">
+  <meta property="og:description" content="Laserové a mechanické gravírování. Firemní cedule, štítky, jmenovky, dárky. Od 1 kusu, dodáváme po celé ČR.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.gravirovani.com">
+  <link rel="canonical" href="https://www.gravirovani.com/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gravírování Špytko",
+    "url": "https://www.gravirovani.com",
+    "description": "Profesionální gravírování laserem a frézováním. Firemní cedule, výrobní štítky, jmenovky.",
+    "priceRange": "Kč",
+    "areaServed": "CZ",
+    "openingHours": "Mo-Fr 08:00-16:00"
+  }
+  </script>
+  <style>
+    /* ============================================================
+       RESET & CUSTOM PROPERTIES
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #1B2A4A;
+      --navy-mid:   #243660;
+      --navy-light: #2E4478;
+      --gold:       #B8963E;
+      --gold-light: #D4AF6A;
+      --gold-pale:  #EDD99A;
+      --cream:      #F8F5F0;
+      --cream-dark: #EEE9E1;
+      --white:      #FFFFFF;
+      --text:       #2B2B2B;
+      --text-mid:   #5A5A5A;
+      --text-light: #8A8A8A;
+      --border:     #E0D8CC;
+      --green-ok:   #1a3d2b;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4 {
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.2;
+    }
+
+    /* ============================================================
+       LAYOUT UTILITIES
+    ============================================================ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .section-pad { padding: 96px 0; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    .divider {
+      width: 56px;
+      height: 3px;
+      background: var(--gold);
+      margin: 16px auto;
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+      display: inline-block;
+      padding: 14px 34px;
+      font-family: Georgia, serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--white);
+      border-color: var(--gold);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+    }
+
+    .btn-navy {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .btn-navy:hover { background: var(--navy-light); border-color: var(--navy-light); }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(27, 42, 74, 0.98);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(184, 150, 62, 0.25);
+      transition: box-shadow 0.3s;
+    }
+
+    #navbar.scrolled {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* --- Logo --- */
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-badge {
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-words {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .nav-logo-top {
+      font-family: Georgia, serif;
+      font-size: 1.05rem;
+      color: var(--white);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-logo-bot {
+      font-family: Georgia, serif;
+      font-size: 0.65rem;
+      color: var(--gold-light);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    /* --- Nav links --- */
+    .nav-links {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 9px 13px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-links a.active { color: var(--gold-light); }
+
+    .nav-cta-link {
+      background: var(--gold);
+      color: var(--white) !important;
+      padding: 9px 18px !important;
+    }
+
+    .nav-cta-link:hover { background: var(--gold-light); }
+
+    /* --- Hamburger --- */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: white;
+      transition: all 0.28s;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #0E1B30 0%, #1B2A4A 45%, #243660 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 130px 0 90px;
+    }
+
+    /* Subtle cross-hatch pattern */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(184,150,62,0.04) 60px),
+        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(184,150,62,0.04) 60px);
+      pointer-events: none;
+    }
+
+    /* Gold accent line top */
+    #hero::after {
+      content: '';
+      position: absolute;
+      top: 74px; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184,150,62,0.4), transparent);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 18px;
+      border: 1px solid rgba(184,150,62,0.5);
+      color: var(--gold-pale);
+      font-size: 0.73rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-family: Georgia, serif;
+      margin-bottom: 28px;
+    }
+
+    .hero-tag-dot {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    #hero h1 {
+      font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+      color: var(--white);
+      margin-bottom: 26px;
+      line-height: 1.08;
+    }
+
+    #hero h1 em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      font-size: 1.12rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 44px;
+      max-width: 540px;
+      line-height: 1.75;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    /* Stats bar */
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      border-top: 1px solid rgba(184,150,62,0.25);
+      padding-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      padding: 0 48px 0 0;
+      margin-right: 48px;
+      border-right: 1px solid rgba(184,150,62,0.2);
+    }
+
+    .stat:last-child { border-right: none; margin-right: 0; }
+
+    .stat-val {
+      display: block;
+      font-family: Georgia, serif;
+      font-size: 2.1rem;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .stat-lbl {
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    #services { background: var(--cream); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .svc-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--gold);
+      padding: 36px 32px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .svc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(27,42,74,0.1);
+    }
+
+    .svc-icon {
+      width: 50px; height: 50px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+
+    .svc-icon svg { width: 26px; height: 26px; }
+
+    .svc-card h3 {
+      font-size: 1.18rem;
+      color: var(--navy);
+      margin-bottom: 11px;
+    }
+
+    .svc-card p {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.72;
+      margin-bottom: 18px;
+    }
+
+    .svc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .svc-tag {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      background: var(--cream-dark);
+      color: var(--text-mid);
+      border: 1px solid var(--border);
+    }
+
+    /* ============================================================
+       WHY US
+    ============================================================ */
+    #why-us { background: var(--navy); }
+
+    #why-us .section-header h2 { color: var(--white); }
+    #why-us .section-header p  { color: rgba(255,255,255,0.65); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+
+    .why-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(184,150,62,0.15);
+      padding: 44px 32px;
+      text-align: center;
+      transition: background 0.22s;
+    }
+
+    .why-card:hover { background: rgba(255,255,255,0.07); }
+
+    .why-num {
+      font-family: Georgia, serif;
+      font-size: 2.8rem;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .why-card h3 {
+      color: var(--white);
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       MATERIALS
+    ============================================================ */
+    #materials { background: var(--white); }
+
+    .mat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .mat-card {
+      border: 1px solid var(--border);
+      background: var(--cream);
+      padding: 28px 20px;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .mat-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .mat-icon {
+      width: 52px; height: 52px;
+      margin: 0 auto 14px;
+    }
+
+    .mat-card h4 {
+      font-family: Georgia, serif;
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .mat-card p {
+      font-size: 0.78rem;
+      color: var(--text-light);
+    }
+
+    /* ============================================================
+       PORTFOLIO
+    ============================================================ */
+    #portfolio { background: var(--cream); }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+
+    .pf-item {
+      aspect-ratio: 4/3;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .pf-bg {
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease;
+    }
+
+    .pf-item:hover .pf-bg { transform: scale(1.04); }
+
+    .pf-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(27,42,74,0.82);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .pf-item:hover .pf-overlay { opacity: 1; }
+
+    .pf-overlay h4 { color: var(--white); font-size: 1.1rem; margin-bottom: 6px; }
+    .pf-overlay p  { color: var(--gold-light); font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; }
+
+    /* ============================================================
+       CALCULATOR
+    ============================================================ */
+    #calculator { background: var(--white); }
+
+    .calc-layout {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .calc-panel {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 48px;
+    }
+
+    .form-field { margin-bottom: 22px; }
+
+    .form-field label {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--navy);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .form-field select,
+    .form-field input[type="text"],
+    .form-field input[type="email"],
+    .form-field input[type="tel"],
+    .form-field input[type="number"],
+    .form-field textarea {
+      width: 100%;
+      padding: 11px 15px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.93rem;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-field select:focus,
+    .form-field input:focus,
+    .form-field textarea:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(27,42,74,0.07);
+    }
+
+    .sel-wrap { position: relative; }
+
+    .sel-wrap::after {
+      content: '▾';
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold);
+      font-size: 0.85rem;
+      pointer-events: none;
+    }
+
+    .range-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .range-wrap input[type="range"] {
+      flex: 1;
+      padding: 0;
+      border: none;
+      background: none;
+      accent-color: var(--navy);
+      height: 4px;
+      cursor: pointer;
+    }
+
+    .range-val {
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      color: var(--navy);
+      min-width: 54px;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    /* --- Price box --- */
+    .price-box {
+      background: var(--navy);
+      color: var(--white);
+      padding: 44px 36px;
+      position: sticky;
+      top: 94px;
+      text-align: center;
+    }
+
+    .price-box-label {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 10px;
+    }
+
+    .price-main {
+      font-family: Georgia, serif;
+      font-size: 3rem;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .price-dph {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 28px;
+    }
+
+    .price-rows {
+      text-align: left;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 18px;
+      margin-bottom: 24px;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.65);
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .price-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 18px;
+      margin-top: 8px;
+    }
+
+    /* ============================================================
+       INQUIRY FORM
+    ============================================================ */
+    #inquiry { background: var(--cream); }
+
+    .inquiry-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .inquiry-aside h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .inquiry-aside > p {
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .benefit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .benefit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .ben-icon {
+      width: 22px; height: 22px;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .ben-icon svg { width: 11px; height: 11px; }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 44px;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--text-mid);
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    .form-check input[type="checkbox"] {
+      width: auto;
+      margin-top: 2px;
+      accent-color: var(--navy);
+      flex-shrink: 0;
+    }
+
+    .form-success {
+      display: none;
+      background: var(--green-ok);
+      border: 1px solid #2d6a4f;
+      color: #95d5b2;
+      padding: 14px 18px;
+      margin-top: 16px;
+      font-size: 0.88rem;
+    }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    #contact { background: var(--navy); }
+
+    #contact .section-header h2 { color: var(--white); }
+    #contact .section-header p  { color: rgba(255,255,255,0.65); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .ct-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(184,150,62,0.15);
+      padding: 44px 32px;
+      text-align: center;
+      transition: background 0.22s;
+    }
+
+    .ct-card:hover { background: rgba(255,255,255,0.07); }
+
+    .ct-icon {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      background: rgba(184,150,62,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .ct-icon svg { width: 22px; height: 22px; stroke: var(--gold-light); fill: none; stroke-width: 1.5; }
+
+    .ct-card h3 {
+      color: var(--white);
+      font-size: 0.78rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .ct-card a,
+    .ct-card p {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .ct-card a:hover { color: var(--gold-light); }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: #0B1525;
+      color: rgba(255,255,255,0.4);
+      padding: 36px 0;
+      font-size: 0.83rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-family: Georgia, serif;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 1px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold-light); }
+
+    /* ============================================================
+       ANIMATION
+    ============================================================ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .why-grid  { grid-template-columns: repeat(2, 1fr); }
+      .mat-grid  { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 860px) {
+      .services-grid   { grid-template-columns: 1fr 1fr; }
+      .calc-layout     { grid-template-columns: 1fr; }
+      .price-box       { position: static; }
+      .inquiry-layout  { grid-template-columns: 1fr; }
+      .contact-grid    { grid-template-columns: 1fr; }
+      .portfolio-grid  { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 74px; left: 0; right: 0; bottom: 0;
+        background: var(--navy);
+        padding: 28px;
+        gap: 6px;
+        z-index: 999;
+        overflow-y: auto;
+        align-items: flex-start;
+      }
+
+      .nav-links.open a { font-size: 1rem; padding: 14px 0; }
+
+      .hamburger { display: flex; }
+
+      .services-grid  { grid-template-columns: 1fr; }
+      .why-grid       { grid-template-columns: 1fr 1fr; }
+      .mat-grid       { grid-template-columns: repeat(2, 1fr); }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .form-row-2     { grid-template-columns: 1fr; }
+      .hero-stats     { gap: 24px 0; }
+      .stat           { padding: 0 24px 0 0; margin-right: 24px; }
+      .calc-panel     { padding: 28px 22px; }
+      .form-card      { padding: 28px 22px; }
+    }
+
+    @media (max-width: 400px) {
+      .why-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<header id="navbar">
+  <div class="nav-inner">
+
+    <a href="#hero" class="nav-logo">
+      <!-- Inline SVG logo mark -->
+      <svg class="nav-logo-badge" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+        <rect width="46" height="46" fill="#1B2A4A"/>
+        <!-- Outer diamond -->
+        <polygon points="23,3 43,23 23,43 3,23"
+                 fill="none" stroke="#B8963E" stroke-width="1.6"/>
+        <!-- Inner diamond -->
+        <polygon points="23,10 36,23 23,36 10,23"
+                 fill="none" stroke="#B8963E" stroke-width="0.8" opacity="0.45"/>
+        <!-- Cross axes -->
+        <line x1="3"  y1="23" x2="43" y2="23" stroke="#B8963E" stroke-width="0.7" opacity="0.3"/>
+        <line x1="23" y1="3"  x2="23" y2="43" stroke="#B8963E" stroke-width="0.7" opacity="0.3"/>
+        <!-- Centre gem -->
+        <circle cx="23" cy="23" r="3" fill="#B8963E"/>
+        <!-- Cutting tip -->
+        <line x1="23" y1="43" x2="23" y2="46" stroke="#B8963E" stroke-width="2.2"/>
+      </svg>
+      <div class="nav-logo-words">
+        <span class="nav-logo-top">Gravírování</span>
+        <span class="nav-logo-bot">Špytko</span>
+      </div>
+    </a>
+
+    <nav>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Navigace">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Služby</a></li>
+        <li><a href="#materials">Materiály</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#calculator">Kalkulace</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#inquiry" class="nav-cta-link">Poptávka</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        <span class="hero-tag-dot"></span>
+        Rodinná firma · Přes 20 let zkušeností
+      </div>
+
+      <h1>Precizní gravírování<br>pro <em>firmy i jednotlivce</em></h1>
+
+      <p class="hero-sub">
+        Laserové a mechanické gravírování firemních cedulí, výrobních štítků,
+        jmenovek a dárkových předmětů. Zakázky od jediného kusu
+        s dodáním po celé České republice.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#inquiry" class="btn btn-gold">Nezávazná poptávka</a>
+        <a href="#calculator" class="btn btn-outline-white">Orientační kalkulace</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-val">20+</span>
+          <span class="stat-lbl">Let zkušeností</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">od&nbsp;1&nbsp;ks</span>
+          <span class="stat-lbl">Min. odběr</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">7&nbsp;dní</span>
+          <span class="stat-lbl">Std. dodání</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">celá&nbsp;ČR</span>
+          <span class="stat-lbl">Doručujeme</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+============================================================ -->
+<section id="services" class="section-pad">
+  <div class="container">
+
+    <div class="section-header fade-up">
+      <h2>Naše služby</h2>
+      <div class="divider"></div>
+      <p>Komplexní gravírování pro státní instituce, firmy i soukromé zákazníky —
+         od jednokusové zakázky až po větší série.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- 1 -->
+      <div class="svc-card fade-up">
+        <div class="svc-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="#B8963E" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="7" width="22" height="14" rx="1"/>
+            <line x1="6" y1="12" x2="20" y2="12"/>
+            <line x1="6" y1="16" x2="14" y2="16"/>
+          </svg>
+        </div>
+        <h3>Firemní cedule a štíty</h3>
+        <p>Reprezentativní cedule pro vstupní dveře, recepce, kanceláře
+           a orientační systémy. Ideální pro firmy, úřady, školy
+           a zdravotnická zařízení.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Mosaz</span>
+          <span class="svc-tag">Hliník</span>
+          <span class="svc-tag">Plast</span>
+          <span class="svc-tag">Orientační systémy</span>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="svc-card fade-up">
+        <div class="svc-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="#B8963E" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="4" width="22" height="18" rx="1"/>
+            <rect x="5" y="7" width="6" height="6" rx="0.5"/>
+            <line x1="15" y1="9"  x2="21" y2="9"/>
+            <line x1="15" y1="13" x2="21" y2="13"/>
+            <line x1="5"  y1="18" x2="21" y2="18"/>
+          </svg>
+        </div>
+        <h3>Výrobní a evidenční štítky</h3>
+        <p>Trvanlivé identifikační štítky pro strojní vybavení, elektroniku
+           a průmyslové aplikace. Splňují normy pro trvalé označování výrobků.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Typové štítky</span>
+          <span class="svc-tag">Bezpečnostní tabulky</span>
+          <span class="svc-tag">Série</span>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="svc-card fade-up">
+        <div class="svc-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="#B8963E" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="13" cy="9" r="5"/>
+            <path d="M5 23c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+          </svg>
+        </div>
+        <h3>Jmenovky a vizitky</h3>
+        <p>Profesionální jmenovky pro zaměstnance, delegáty a konference.
+           Elegantní kovové vizitky jako dokonalý první dojem.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">S magnetem / klipem</span>
+          <span class="svc-tag">Stolní jmenovky</span>
+          <span class="svc-tag">Kovové vizitky</span>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="svc-card fade-up">
+        <div class="svc-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="#B8963E" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2l2.5 6h6.5l-5 4 2 6.5L13 15 7 18.5l2-6.5-5-4h6.5z"/>
+          </svg>
+        </div>
+        <h3>Gravírované dárky</h3>
+        <p>Originální personalizované dárky pro zaměstnance, partnery i blízké.
+           Vygravirujeme vzkaz, jméno nebo věnování.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Plakety</span>
+          <span class="svc-tag">Zapalovače</span>
+          <span class="svc-tag">Kůže</span>
+          <span class="svc-tag">Sklo</span>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="svc-card fade-up">
+        <div class="svc-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="#B8963E" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="13,2 24,8.5 24,17.5 13,24 2,17.5 2,8.5"/>
+            <circle cx="13" cy="13" r="4"/>
+          </svg>
+        </div>
+        <h3>Reklamní předměty</h3>
+        <p>Gravírování loga a sloganu na reklamní předměty.
+           Zvyšte povědomí o značce pomocí kvalitních,
+           trvanlivých materiálů.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Klíčenky</span>
+          <span class="svc-tag">USB disky</span>
+          <span class="svc-tag">Psací potřeby</span>
+          <span class="svc-tag">Množstevní sleva</span>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="svc-card fade-up">
+        <div class="svc-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="#B8963E" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 4l3 5h5l-4 3.5 1.5 5.5L13 15l-5.5 3 1.5-5.5L5 9h5z" stroke-width="1.2"/>
+            <polyline points="9,17 7,22M17,17 19,22" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <h3>Zakázkové a atypické práce</h3>
+        <p>Nestandardní zakázky na míru. Přineste nám předmět —
+           poradíme si s neobvyklými požadavky a navrhnem
+           nejlepší řešení.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Atypické materiály</span>
+          <span class="svc-tag">Váš materiál</span>
+          <span class="svc-tag">Konzultace zdarma</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY US
+============================================================ -->
+<section id="why-us" class="section-pad">
+  <div class="container">
+
+    <div class="section-header fade-up">
+      <h2>Proč si vybrat nás?</h2>
+      <div class="divider"></div>
+      <p>Rodinná firma s letitou tradicí, která si zakládá na kvalitě,
+         přesnosti a osobním přístupu ke každé zakázce.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <span class="why-num">20+</span>
+        <h3>Let zkušeností</h3>
+        <p>Gravírování je naším řemeslem přes dvě dekády.
+           Každý materiál, každá technika — to známe od základů.</p>
+      </div>
+      <div class="why-card fade-up">
+        <span class="why-num">1&nbsp;ks</span>
+        <h3>Od jednoho kusu</h3>
+        <p>Minimální odběr neřešíme. Přijmeme zakázku na jeden kus
+           stejně rádi jako na stokusovou sérii.</p>
+      </div>
+      <div class="why-card fade-up">
+        <span class="why-num">7&nbsp;dní</span>
+        <h3>Rychlé dodání</h3>
+        <p>Většinu zakázek expedujeme do týdne. Expresní zpracování
+           je možné po individuální domluvě.</p>
+      </div>
+      <div class="why-card fade-up">
+        <span class="why-num">ČR</span>
+        <h3>Celá republika</h3>
+        <p>Doručujeme přes PPL nebo Českou poštu kamkoli v ČR.
+           Osobní odběr vítán.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     MATERIALS
+============================================================ -->
+<section id="materials" class="section-pad">
+  <div class="container">
+
+    <div class="section-header fade-up">
+      <h2>Materiály a techniky</h2>
+      <div class="divider"></div>
+      <p>Gravírujeme do celé řady materiálů. Poradíme vám,
+         který je nejvhodnější pro vaše konkrétní použití.</p>
+    </div>
+
+    <div class="mat-grid">
+
+      <div class="mat-card fade-up">
+        <svg class="mat-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="18" width="42" height="22" rx="2" fill="#B8963E" opacity="0.18"/>
+          <rect x="5" y="18" width="42" height="22" rx="2" fill="none" stroke="#B8963E" stroke-width="1.5"/>
+          <line x1="5"  y1="26" x2="47" y2="26" stroke="#B8963E" stroke-width="0.9" opacity="0.45"/>
+          <line x1="12" y1="22" x2="12" y2="36" stroke="#B8963E" stroke-width="0.7" opacity="0.3"/>
+        </svg>
+        <h4>Mosaz</h4>
+        <p>Tradiční, elegantní</p>
+      </div>
+
+      <div class="mat-card fade-up">
+        <svg class="mat-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="18" width="42" height="22" rx="2" fill="#9EB5C8" opacity="0.22"/>
+          <rect x="5" y="18" width="42" height="22" rx="2" fill="none" stroke="#9EB5C8" stroke-width="1.5"/>
+          <line x1="5"  y1="26" x2="47" y2="26" stroke="#9EB5C8" stroke-width="0.9" opacity="0.45"/>
+        </svg>
+        <h4>Hliník</h4>
+        <p>Lehký, odolný</p>
+      </div>
+
+      <div class="mat-card fade-up">
+        <svg class="mat-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="16" width="36" height="26" rx="2" fill="#7B9966" opacity="0.2"/>
+          <rect x="8" y="16" width="36" height="26" rx="2" fill="none" stroke="#7B9966" stroke-width="1.5"/>
+          <line x1="14" y1="22" x2="38" y2="22" stroke="#7B9966" stroke-width="0.8"/>
+          <line x1="14" y1="28" x2="38" y2="28" stroke="#7B9966" stroke-width="0.8"/>
+          <line x1="14" y1="34" x2="28" y2="34" stroke="#7B9966" stroke-width="0.8"/>
+        </svg>
+        <h4>Dřevo</h4>
+        <p>Přírodní, hřejivé</p>
+      </div>
+
+      <div class="mat-card fade-up">
+        <svg class="mat-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="16" width="40" height="26" rx="2" fill="#7FC4DC" opacity="0.18"/>
+          <rect x="6" y="16" width="40" height="26" rx="2" fill="none" stroke="#7FC4DC" stroke-width="1.5"/>
+          <ellipse cx="17" cy="29" rx="6" ry="8" fill="none" stroke="#7FC4DC" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+        <h4>Sklo</h4>
+        <p>Luxusní, průhledné</p>
+      </div>
+
+      <div class="mat-card fade-up">
+        <svg class="mat-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="16" width="40" height="26" rx="2" fill="#C9A87A" opacity="0.22"/>
+          <rect x="6" y="16" width="40" height="26" rx="2" fill="none" stroke="#C9A87A" stroke-width="1.5"/>
+          <path d="M6 24 Q26 20 46 24" stroke="#C9A87A" stroke-width="0.8" fill="none" opacity="0.5"/>
+        </svg>
+        <h4>Kůže</h4>
+        <p>Prémiové dárky</p>
+      </div>
+
+      <div class="mat-card fade-up">
+        <svg class="mat-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="18" width="42" height="22" rx="2" fill="#E27B60" opacity="0.17"/>
+          <rect x="5" y="18" width="42" height="22" rx="2" fill="none" stroke="#E27B60" stroke-width="1.5"/>
+        </svg>
+        <h4>Plast</h4>
+        <p>Ekonomické řešení</p>
+      </div>
+
+      <div class="mat-card fade-up">
+        <svg class="mat-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="18" width="42" height="22" rx="2" fill="#88CFDE" opacity="0.18"/>
+          <rect x="5" y="18" width="42" height="22" rx="2" fill="none" stroke="#88CFDE" stroke-width="1.5"/>
+          <line x1="5"  y1="26" x2="47" y2="26" stroke="#88CFDE" stroke-width="0.8" opacity="0.35"/>
+          <line x1="26" y1="18" x2="26" y2="40" stroke="#88CFDE" stroke-width="0.8" opacity="0.35"/>
+        </svg>
+        <h4>Akryl</h4>
+        <p>Moderní, čistý vzhled</p>
+      </div>
+
+      <div class="mat-card fade-up">
+        <svg class="mat-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="26,5 47,26 26,47 5,26"
+                   fill="#B8963E" opacity="0.14"
+                   stroke="#B8963E" stroke-width="1.5"/>
+          <circle cx="26" cy="26" r="3" fill="#B8963E" opacity="0.5"/>
+        </svg>
+        <h4>Váš materiál</h4>
+        <p>Přinesete — vygravirujeme</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PORTFOLIO
+============================================================ -->
+<section id="portfolio" class="section-pad">
+  <div class="container">
+
+    <div class="section-header fade-up">
+      <h2>Ukázky naší práce</h2>
+      <div class="divider"></div>
+      <p>Každá zakázka je pro nás výzvou. Prohlédněte si ukázky z naší dílny.</p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="pf-item fade-up">
+        <div class="pf-bg" style="background:linear-gradient(135deg,#1B2A4A,#2A3F6B)">
+          <svg width="90" viewBox="0 0 200 160" opacity="0.18">
+            <rect x="20" y="30" width="160" height="100" rx="4" stroke="white" stroke-width="2.5" fill="none"/>
+            <line x1="40" y1="60"  x2="160" y2="60"  stroke="white" stroke-width="2"/>
+            <line x1="40" y1="80"  x2="130" y2="80"  stroke="white" stroke-width="1.5"/>
+            <line x1="40" y1="98"  x2="100" y2="98"  stroke="white" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="pf-overlay">
+          <h4>Mosazná cedule</h4>
+          <p>Firemní recepce</p>
+        </div>
+      </div>
+
+      <div class="pf-item fade-up">
+        <div class="pf-bg" style="background:linear-gradient(135deg,#243555,#1B2A4A)">
+          <svg width="90" viewBox="0 0 200 160" opacity="0.18">
+            <rect x="30" y="40" width="140" height="80" rx="40" stroke="white" stroke-width="2" fill="none"/>
+            <line x1="60" y1="80" x2="140" y2="80" stroke="white" stroke-width="1.5"/>
+            <text x="100" y="77" text-anchor="middle" font-size="18" fill="white">Jan Novák</text>
+          </svg>
+        </div>
+        <div class="pf-overlay">
+          <h4>Firemní jmenovka</h4>
+          <p>Zaměstnanecká jmenovka</p>
+        </div>
+      </div>
+
+      <div class="pf-item fade-up">
+        <div class="pf-bg" style="background:linear-gradient(135deg,#162238,#1B2A4A)">
+          <svg width="90" viewBox="0 0 200 160" opacity="0.18">
+            <rect x="40" y="40" width="120" height="80" rx="2" stroke="white" stroke-width="1.8" fill="none"/>
+            <text x="100" y="72"  text-anchor="middle" font-size="13" fill="white">SN: 24-0891</text>
+            <text x="100" y="92"  text-anchor="middle" font-size="11" fill="white">TYP: ZX-200</text>
+            <text x="100" y="108" text-anchor="middle" font-size="9"  fill="white">MAX. 400V / 16A</text>
+          </svg>
+        </div>
+        <div class="pf-overlay">
+          <h4>Výrobní štítek</h4>
+          <p>Průmyslové označení</p>
+        </div>
+      </div>
+
+      <div class="pf-item fade-up">
+        <div class="pf-bg" style="background:linear-gradient(135deg,#1E3050,#2A3F6B)">
+          <svg width="90" viewBox="0 0 200 160" opacity="0.18">
+            <polygon points="100,15 165,150 35,150" stroke="white" stroke-width="2" fill="none"/>
+            <text x="100" y="130" text-anchor="middle" font-size="12" fill="white">1. MÍSTO</text>
+          </svg>
+        </div>
+        <div class="pf-overlay">
+          <h4>Trofej a plaketa</h4>
+          <p>Sportovní ocenění</p>
+        </div>
+      </div>
+
+      <div class="pf-item fade-up">
+        <div class="pf-bg" style="background:linear-gradient(135deg,#112030,#1B2A4A)">
+          <svg width="90" viewBox="0 0 200 160" opacity="0.18">
+            <rect x="20" y="20" width="160" height="120" rx="4" stroke="white" stroke-width="2" fill="none"/>
+            <circle cx="100" cy="60" r="20" stroke="white" stroke-width="1.5" fill="none"/>
+            <line x1="40" y1="100" x2="160" y2="100" stroke="white" stroke-width="1"/>
+            <text x="100" y="120" text-anchor="middle" font-size="11" fill="white">Město Praha</text>
+          </svg>
+        </div>
+        <div class="pf-overlay">
+          <h4>Orientační cedule</h4>
+          <p>Státní instituce</p>
+        </div>
+      </div>
+
+      <div class="pf-item fade-up">
+        <div class="pf-bg" style="background:linear-gradient(135deg,#1A2E4A,#243660)">
+          <svg width="90" viewBox="0 0 200 160" opacity="0.18">
+            <rect x="50" y="20" width="100" height="130" rx="3" stroke="white" stroke-width="2" fill="none"/>
+            <text x="100" y="68"  text-anchor="middle" font-size="13" fill="white">S láskou</text>
+            <text x="100" y="88"  text-anchor="middle" font-size="10" fill="white">Milé Anně</text>
+            <text x="100" y="106" text-anchor="middle" font-size="9"  fill="white">k narozeninám</text>
+          </svg>
+        </div>
+        <div class="pf-overlay">
+          <h4>Dárkové gravírování</h4>
+          <p>Personalizovaný předmět</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRICE CALCULATOR
+============================================================ -->
+<section id="calculator" class="section-pad">
+  <div class="container">
+
+    <div class="section-header fade-up">
+      <h2>Orientační kalkulace ceny</h2>
+      <div class="divider"></div>
+      <p>Zjistěte přibližnou cenu vaší zakázky.
+         Pro přesnou nabídku vyplňte poptávkový formulář níže.</p>
+    </div>
+
+    <div class="calc-layout">
+
+      <!-- Form -->
+      <div class="calc-panel fade-up">
+
+        <div class="form-field">
+          <label>Materiál</label>
+          <div class="sel-wrap">
+            <select id="cMat" onchange="calcPrice()">
+              <option value="plast">Plast — gravometal, akryl</option>
+              <option value="hlinik">Hliník</option>
+              <option value="mosaz">Mosaz</option>
+              <option value="drevo">Dřevo</option>
+              <option value="sklo">Sklo</option>
+              <option value="kuze">Kůže / textil</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Rozměr výrobku</label>
+          <div class="sel-wrap">
+            <select id="cSize" onchange="calcPrice()">
+              <option value="s">Malý — do 100 × 60 mm</option>
+              <option value="m" selected>Střední — do 200 × 150 mm</option>
+              <option value="l">Velký — nad 200 × 150 mm</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Technika gravírování</label>
+          <div class="sel-wrap">
+            <select id="cTech" onchange="calcPrice()">
+              <option value="laser">Laserové gravírování</option>
+              <option value="cnc">CNC frézování</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Složitost motivu</label>
+          <div class="sel-wrap">
+            <select id="cComplexity" onchange="calcPrice()">
+              <option value="text">Pouze text</option>
+              <option value="logo">Logo + text</option>
+              <option value="graphic">Složitá grafika / fotografie</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Počet kusů: <strong id="qtyLabel">1</strong></label>
+          <div class="range-wrap">
+            <input type="range" id="cQty" min="1" max="100" value="1"
+                   oninput="document.getElementById('qtyLabel').textContent=this.value; calcPrice()">
+            <span class="range-val" id="qtyVal">1 ks</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Price box -->
+      <div class="price-box fade-up">
+        <div class="price-box-label">Orientační cena zakázky</div>
+        <div class="price-main" id="priceTotal">290 Kč</div>
+        <div class="price-dph">celkem bez DPH</div>
+
+        <div class="price-rows">
+          <div class="price-row">
+            <span>Cena za kus</span>
+            <span id="pricePerPc">290 Kč</span>
+          </div>
+          <div class="price-row">
+            <span>Počet kusů</span>
+            <span id="priceQtyRow">1 ks</span>
+          </div>
+          <div class="price-row">
+            <span>Množstevní sleva</span>
+            <span id="priceDiscount">—</span>
+          </div>
+        </div>
+
+        <a href="#inquiry" class="btn btn-gold" style="display:block; text-align:center; margin-bottom:18px;">
+          Odeslat poptávku
+        </a>
+
+        <div class="price-note">
+          Cena je orientační a nezahrnuje dopravu ani přípravu grafiky.
+          Přesná nabídka bude zaslána po odeslání poptávky obvykle do 24 h.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INQUIRY FORM
+============================================================ -->
+<section id="inquiry" class="section-pad">
+  <div class="container">
+    <div class="inquiry-layout">
+
+      <!-- Aside -->
+      <div class="inquiry-aside fade-up">
+        <h2>Nezávazná poptávka</h2>
+        <p>Vyplňte formulář a do 24 hodin vám zašleme přesnou
+           cenovou nabídku. Konzultace i příprava grafiky jsou zdarma.</p>
+
+        <ul class="benefit-list">
+          <li>
+            <div class="ben-icon">
+              <svg viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.2">
+                <polyline points="1,6 4,9 10,2"/>
+              </svg>
+            </div>
+            <span>Odpovídáme do 24 hodin v pracovní dny</span>
+          </li>
+          <li>
+            <div class="ben-icon">
+              <svg viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.2">
+                <polyline points="1,6 4,9 10,2"/>
+              </svg>
+            </div>
+            <span>Konzultace a návrh grafiky zcela zdarma</span>
+          </li>
+          <li>
+            <div class="ben-icon">
+              <svg viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.2">
+                <polyline points="1,6 4,9 10,2"/>
+              </svg>
+            </div>
+            <span>Zakázky od 1 kusu bez příplatků</span>
+          </li>
+          <li>
+            <div class="ben-icon">
+              <svg viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.2">
+                <polyline points="1,6 4,9 10,2"/>
+              </svg>
+            </div>
+            <span>Množstevní slevy pro série a firemní klienty</span>
+          </li>
+          <li>
+            <div class="ben-icon">
+              <svg viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.2">
+                <polyline points="1,6 4,9 10,2"/>
+              </svg>
+            </div>
+            <span>Dodání do 7 pracovních dnů po celé ČR</span>
+          </li>
+          <li>
+            <div class="ben-icon">
+              <svg viewBox="0 0 11 11" fill="none" stroke="white" stroke-width="2.2">
+                <polyline points="1,6 4,9 10,2"/>
+              </svg>
+            </div>
+            <span>Přijímáme faktury i hotovost</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Form card -->
+      <div class="form-card fade-up">
+        <form id="inquiryForm" onsubmit="submitForm(event)">
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>Jméno a příjmení *</label>
+              <input type="text" name="name" placeholder="Jan Novák" required>
+            </div>
+            <div class="form-field">
+              <label>Firma / Organizace</label>
+              <input type="text" name="company" placeholder="Firma s.r.o.">
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>E-mail *</label>
+              <input type="email" name="email" placeholder="jan@firma.cz" required>
+            </div>
+            <div class="form-field">
+              <label>Telefon</label>
+              <input type="tel" name="phone" placeholder="+420 777 888 999">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Typ zakázky</label>
+            <div class="sel-wrap">
+              <select name="type">
+                <option value="">— vyberte typ —</option>
+                <option>Firemní cedule a štíty</option>
+                <option>Výrobní / evidenční štítky</option>
+                <option>Jmenovky</option>
+                <option>Gravírované dárky</option>
+                <option>Reklamní předměty</option>
+                <option>Zakázkové / atypické práce</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label>Přibližný počet kusů</label>
+              <input type="number" name="quantity" placeholder="1" min="1">
+            </div>
+            <div class="form-field">
+              <label>Materiál (pokud víte)</label>
+              <input type="text" name="material" placeholder="mosaz, hliník…">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Popis zakázky *</label>
+            <textarea name="description" rows="5"
+              placeholder="Popište prosím zakázku — rozměry, text k vygravirování, použití, termín dodání…"
+              required style="resize:vertical; min-height:100px;"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label class="form-check" style="text-transform:none;letter-spacing:0;font-weight:normal;font-size:0.83rem;">
+              <input type="checkbox" required>
+              Souhlasím se zpracováním osobních údajů pro zodpovězení mé poptávky dle&nbsp;GDPR.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-navy">Odeslat poptávku →</button>
+          <div class="form-success" id="formOk">
+            ✓ &nbsp;Poptávka byla odeslána. Ozveme se vám do 24 hodin.
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section id="contact" class="section-pad">
+  <div class="container">
+
+    <div class="section-header fade-up">
+      <h2>Kontakt</h2>
+      <div class="divider"></div>
+      <p>Jsme k dispozici v pracovní dny. Neváhejte nás kdykoli kontaktovat.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="ct-card fade-up">
+        <div class="ct-icon">
+          <svg viewBox="0 0 22 22"><path d="M4 4h14c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="2,6 11,13 20,6"/></svg>
+        </div>
+        <h3>E-mail</h3>
+        <a href="mailto:info@gravirovani.com">info@gravirovani.com</a>
+      </div>
+
+      <div class="ct-card fade-up">
+        <div class="ct-icon">
+          <svg viewBox="0 0 22 22"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.13 12.7 19.79 19.79 0 012.06 4.1 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3>Telefon</h3>
+        <a href="tel:+420XXXXXXXXX">+420 XXX XXX XXX</a>
+      </div>
+
+      <div class="ct-card fade-up">
+        <div class="ct-icon">
+          <svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Otevírací doba</h3>
+        <p>Pondělí – Pátek<br>8:00 – 16:00</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-brand">GRAVÍROVÁNÍ ŠPYTKO</span><br>
+        © 2025 Gravírování Špytko. Všechna práva vyhrazena.
+      </div>
+      <nav class="footer-links" aria-label="Patička navigace">
+        <a href="#services">Služby</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#calculator">Kalkulace</a>
+        <a href="#inquiry">Poptávka</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+/* ==================== PRICE CALCULATOR ==================== */
+const BASE = {
+  plast:  { s: 110, m: 190, l: 360 },
+  hlinik: { s: 170, m: 310, l: 560 },
+  mosaz:  { s: 270, m: 460, l: 820 },
+  drevo:  { s: 140, m: 250, l: 440 },
+  sklo:   { s: 210, m: 370, l: 660 },
+  kuze:   { s: 150, m: 270, l: 480 }
+};
+
+const TECH_M     = { laser: 1.00, cnc: 1.25 };
+const COMPLEX_M  = { text: 1.0,  logo: 1.45, graphic: 1.90 };
+
+function qtyDiscount(q) {
+  if (q === 1)  return 0;
+  if (q <= 5)   return 0.05;
+  if (q <= 15)  return 0.10;
+  if (q <= 50)  return 0.18;
+  return 0.25;
+}
+
+function fmt(n) { return n.toLocaleString('cs-CZ') + ' Kč'; }
+
+function calcPrice() {
+  const mat  = document.getElementById('cMat').value;
+  const size = document.getElementById('cSize').value;
+  const tech = document.getElementById('cTech').value;
+  const cplx = document.getElementById('cComplexity').value;
+  const qty  = parseInt(document.getElementById('cQty').value, 10);
+
+  const base      = BASE[mat][size];
+  const unitFull  = Math.round(base * TECH_M[tech] * COMPLEX_M[cplx]);
+  const disc      = qtyDiscount(qty);
+  const unitDisc  = Math.round(unitFull * (1 - disc));
+  const total     = unitDisc * qty;
+
+  document.getElementById('priceTotal').textContent   = fmt(total);
+  document.getElementById('pricePerPc').textContent   = fmt(unitDisc);
+  document.getElementById('priceQtyRow').textContent  = qty + ' ks';
+  document.getElementById('priceDiscount').textContent= disc > 0 ? '−' + (disc * 100) + ' %' : '—';
+  document.getElementById('qtyVal').textContent       = qty + ' ks';
+}
+
+calcPrice(); // init
+
+/* ==================== FORM SUBMIT ==================== */
+function submitForm(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Odesílám…';
+  /* Replace the setTimeout below with an actual AJAX/fetch call to your backend */
+  setTimeout(() => {
+    document.getElementById('formOk').style.display = 'block';
+    btn.textContent = '✓ Odesláno';
+    btn.style.background = '#1a3d2b';
+    document.getElementById('formOk').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 1200);
+}
+
+/* ==================== MOBILE MENU ==================== */
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+document.querySelectorAll('#navLinks a').forEach(a =>
+  a.addEventListener('click', () =>
+    document.getElementById('navLinks').classList.remove('open')
+  )
+);
+
+/* ==================== NAVBAR SCROLL SHADOW ==================== */
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+/* ==================== ACTIVE NAV HIGHLIGHT ==================== */
+const sections  = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-links a[href^="#"]');
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+sections.forEach(s => io.observe(s));
+
+/* ==================== SCROLL FADE-IN ==================== */
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      fadeObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+</script>
+
+</body>
+</html>
