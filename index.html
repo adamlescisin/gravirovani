@@ -188,32 +188,10 @@
       flex-shrink: 0;
     }
 
-    .nav-logo-badge {
-      width: 46px;
-      height: 46px;
+    .nav-logo-svg {
+      height: 48px;
+      width: auto;
       flex-shrink: 0;
-    }
-
-    .nav-logo-words {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .nav-logo-top {
-      font-family: Georgia, serif;
-      font-size: 1.05rem;
-      color: var(--white);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    .nav-logo-bot {
-      font-family: Georgia, serif;
-      font-size: 0.65rem;
-      color: var(--gold-light);
-      letter-spacing: 4px;
-      text-transform: uppercase;
     }
 
     /* --- Nav links --- */
@@ -987,28 +965,43 @@
 <header id="navbar">
   <div class="nav-inner">
 
-    <a href="#hero" class="nav-logo">
-      <!-- Inline SVG logo mark -->
-      <svg class="nav-logo-badge" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
-        <rect width="46" height="46" fill="#1B2A4A"/>
-        <!-- Outer diamond -->
-        <polygon points="23,3 43,23 23,43 3,23"
-                 fill="none" stroke="#B8963E" stroke-width="1.6"/>
-        <!-- Inner diamond -->
-        <polygon points="23,10 36,23 23,36 10,23"
-                 fill="none" stroke="#B8963E" stroke-width="0.8" opacity="0.45"/>
-        <!-- Cross axes -->
-        <line x1="3"  y1="23" x2="43" y2="23" stroke="#B8963E" stroke-width="0.7" opacity="0.3"/>
-        <line x1="23" y1="3"  x2="23" y2="43" stroke="#B8963E" stroke-width="0.7" opacity="0.3"/>
-        <!-- Centre gem -->
-        <circle cx="23" cy="23" r="3" fill="#B8963E"/>
-        <!-- Cutting tip -->
-        <line x1="23" y1="43" x2="23" y2="46" stroke="#B8963E" stroke-width="2.2"/>
+    <a href="#hero" class="nav-logo" aria-label="Gravírování Špytko – domů">
+      <!--
+        Logo recreation: bold G with gold diagonal accent + wordmark
+        Original design © Gravírování Špytko
+      -->
+      <svg class="nav-logo-svg"
+           viewBox="0 0 460 92"
+           xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true">
+
+        <!-- ── G letter ── -->
+        <text x="2" y="82"
+              font-family="'Arial Black','Arial Bold',Gadget,sans-serif"
+              font-size="86"
+              font-weight="900"
+              fill="white">G</text>
+
+        <!-- ── Gold diagonal accent (engraving chisel mark) ── -->
+        <!--   Sits in the upper opening of the G, angled ~60° -->
+        <polygon points="40,30 56,4 71,4 55,30" fill="#F5C21C"/>
+
+        <!-- ── GRAVÍROVÁNÍ – bold wordmark ── -->
+        <text x="101" y="55"
+              font-family="'Arial Black','Arial Bold',Gadget,sans-serif"
+              font-size="43"
+              font-weight="900"
+              fill="white"
+              letter-spacing="0.3">GRAVÍROVÁNÍ</text>
+
+        <!-- ── Špytko – light sub-word ── -->
+        <text x="105" y="83"
+              font-family="Arial,'Helvetica Neue',Helvetica,sans-serif"
+              font-size="25"
+              font-weight="400"
+              fill="rgba(255,255,255,0.88)">Špytko</text>
+
       </svg>
-      <div class="nav-logo-words">
-        <span class="nav-logo-top">Gravírování</span>
-        <span class="nav-logo-bot">Špytko</span>
-      </div>
     </a>
 
     <nav>
